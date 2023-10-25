@@ -32,7 +32,7 @@ async def request(url):
             async with session.get(url) as response:
                 if response.status == 200:
                     r = await response.json()
-                    return r
+                    return r 
                 logging.error(f"Error status {response.status} for {url}")
         except aiohttp.ClientConnectorError as e:
             logging.error(f"Connection error {url}: {e}")
